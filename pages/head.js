@@ -12,6 +12,5 @@ export default ({ title='Karl Shouler', description='' }) =>
         <meta property="og:image" content="" />
         <meta property="og:description" content={description} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="/src/styles.css" />
-        <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css"></link>
+        <link rel="stylesheet" href="/static/tachyons.min.css" />
     </Head>
