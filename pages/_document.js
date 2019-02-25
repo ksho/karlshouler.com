@@ -27,5 +27,5 @@ export default class MyDocument extends Document {
 }
 
 const bodyStyle = {
-    backgroundColor: '#f7f7f7;'
+    backgroundColor: '#f7f7f7'
 }
