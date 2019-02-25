@@ -1,2 +1,31 @@
+const path = require('path')
 const withTypescript = require('@zeit/next-typescript')
-module.exports = withTypescript()
+
+module.exports = withTypescript({
+    pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
+
+    webpack(config, { dev, defaultLoaders }) {
+        config.module.rules.push({
+        test: /\.html.md$/,
+        include: path.join(__dirname, 'pages/blog'),
+        use: [
+            defaultLoaders.babel,
+            {
+            loader: './src/post-loader'
+            }
+        ]
+        })
+
+        config.node = {
+        Buffer: false
+        }
+
+        return config
+    },
+    exportPathMap() {
+        return {
+            "/": { page: "/" },
+            "/blog/2018-11-28-secure-cloud-storage.html": { page: "/blog/2018-11-28-secure-cloud-storage.html" },
+        }
+    },
+})
