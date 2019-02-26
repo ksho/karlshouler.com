@@ -1,7 +1,8 @@
 const path = require('path')
 const withTypescript = require('@zeit/next-typescript')
+const withSourceMaps = require('@zeit/next-source-maps')
 
-module.exports = withTypescript({
+module.exports = withTypescript(withSourceMaps({
     pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
 
     webpack(config, { dev, defaultLoaders }) {
@@ -26,6 +27,7 @@ module.exports = withTypescript({
         return {
             "/": { page: "/" },
             "/blog/2018-11-28-secure-cloud-storage.html": { page: "/blog/2018-11-28-secure-cloud-storage.html" },
+            "/blog/2017-08-06-when-is-golden-hour.html": { page: "/blog/2017-08-06-when-is-golden-hour.html" },
         }
     },
-})
+}))

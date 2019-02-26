@@ -14,6 +14,7 @@
     "@types/react": "^16.8.1",
     "@types/react-dom": "^16.0.11",
     "@types/styled-components": "^4.1.6",
+    "@zeit/next-source-maps": "0.0.3",
     "@zeit/next-typescript": "^1.1.1",
     "classnames": "^2.2.6",
     "execa": "^1.0.0",

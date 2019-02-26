@@ -2,6 +2,7 @@ import * as React from 'react';
 import Head from './head';
 import Link from 'next/link'
 import { Body, Divider, Grid, ListWrapper, StyledAnchor, Subtitle, Title } from '../src/components/SharedComponents';
+import Header from '../src/components/Header';
 
 export default class App extends React.Component {
     render() {
@@ -9,13 +10,15 @@ export default class App extends React.Component {
             <div className='baskerville'>
                 <Head/>
                 <Grid>
-                    <Title href='/'>Karl's website.</Title>
-                    <Subtitle>This is where I share my thoughts on technology, photography, and music.</Subtitle>
+                    <Header/>
                     <Divider>✷</Divider>
                     <Body>
                         <div className='f3 mb2 sans-serif'>Writing</div>
                         <Link href="/blog/2018-11-28-secure-cloud-storage.html">
                             <StyledAnchor>Securing Personal Documents in the Cloud with Cryptomator</StyledAnchor>
+                        </Link><br/><br/>
+                        <Link href="/blog/2017-08-06-when-is-golden-hour.html">
+                            <StyledAnchor>whenisgoldenhour.com</StyledAnchor>
                         </Link>
                     </Body>
                     <Divider>✷</Divider>

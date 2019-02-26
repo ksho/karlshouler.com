@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Head from '../../pages/head';
 
 import { Body, Divider, Grid, Subtitle, Title } from './SharedComponents';
+import Header from './Header';
 
 const styles = {
   anchor: 'dark-gray link bb',
@@ -13,9 +14,8 @@ export default (props) =>
     <div className='baskerville'>
         <Head/>
         <Grid>
-            <Title href='/'>Karl's website.</Title>
-                <Subtitle>This is where I share my thoughts on technology, photography, and music.</Subtitle>
-                <Divider>✷</Divider>
+            <Header/>
+            <Divider>✷</Divider>
             <Body>
                 {props.children}
             </Body>
