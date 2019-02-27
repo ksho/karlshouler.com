@@ -1,23 +1,47 @@
 import React from 'react'
-import Link from 'next/link'
+import styled from 'styled-components';
+
 import Head from '../../pages/head';
 
-import { Body, Divider, Grid, Subtitle, Title } from './SharedComponents';
+import { Body, Divider, Grid } from './SharedComponents';
 import Header from './Header';
-
-const styles = {
-  anchor: 'dark-gray link bb',
-  h1: 'sans-serif lh-title fw3'
+interface IOwnState {
+    title: string;
+    created: string;
+    children: unknown;
 }
 
-export default (props) =>
-    <div className='baskerville'>
-        <Head/>
-        <Grid>
-            <Header/>
-            <Divider>✷</Divider>
-            <Body>
-                {props.children}
-            </Body>
-        </Grid>
-    </div>
+export default class Post extends React.Component<IOwnState> {
+    render() {
+        const { title, created, children } = this.props;
+        return (
+            <div className='baskerville'>
+                <Head/>
+                <Grid>
+                    <Header/>
+                    <Divider>✷</Divider>
+                    <PostMeta>
+                        <h2 className='sans-serif lh-title fw3 ma0'>{title}</h2>
+                        <CreatedTime>{created}</CreatedTime>
+                    </PostMeta>
+                    <Body>
+                        {children}
+                    </Body>
+                </Grid>
+            </div>
+        );
+    }
+}
+
+const PostMeta = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+`;
+
+const CreatedTime = styled.div.attrs({
+    className: `sans-serif f7`,
+})`
+    color: #797979;
+    font-weight: 500;
+`;

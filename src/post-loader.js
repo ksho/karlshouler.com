@@ -39,7 +39,8 @@ const renderPost = (source, resourcePath) => {
     const props = Object.assign({}, postHast.data, {
       path: `pages/blog/${slug}.html.js`,
       permalink: `blog/${slug}`,
-      updatedAt: stats.stdout
+      created: postHast.data.created,
+      title: postHast.data.title,
     })
     return postTemplate(props, postHast.contents)
   })

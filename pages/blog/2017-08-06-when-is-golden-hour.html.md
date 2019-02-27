@@ -1,5 +1,6 @@
 ---
-title: "whenisgoldenhour.com"
+title: whenisgoldenhour.com
+created: 2017-08-06
 ---
 
 There are a ton of tools out there for finding sunrise, sunset, golden hour, etc. for a particular day in a particular spot on earth. [The Golden Hour Calculator](http://golden-hour.com/) being the one I frequented.

@@ -7,18 +7,18 @@ module.exports = withTypescript(withSourceMaps({
 
     webpack(config, { dev, defaultLoaders }) {
         config.module.rules.push({
-        test: /\.html.md$/,
-        include: path.join(__dirname, 'pages/blog'),
-        use: [
-            defaultLoaders.babel,
-            {
-            loader: './src/post-loader'
-            }
-        ]
+            test: /\.html.md$/,
+            include: path.join(__dirname, 'pages/blog'),
+            use: [
+                defaultLoaders.babel,
+                {
+                    loader: './src/post-loader'
+                }
+            ]
         })
 
         config.node = {
-        Buffer: false
+            Buffer: false
         }
 
         return config
