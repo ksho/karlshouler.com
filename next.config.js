@@ -7,18 +7,21 @@ module.exports = withTypescript(withSourceMaps({
 
     webpack(config, { dev, defaultLoaders }) {
         config.module.rules.push({
-        test: /\.html.md$/,
-        include: path.join(__dirname, 'pages/blog'),
-        use: [
-            defaultLoaders.babel,
-            {
-            loader: './src/post-loader'
-            }
-        ]
+            test: /\.md$/,
+            include: path.join(__dirname, 'pages/blog'),
+            use: [
+                defaultLoaders.babel,
+                {
+                    loader: './src/post-loader'
+                }
+            ]
         })
 
+        // Absolute import paths https://moduscreate.com/blog/es6-es2015-import-no-relative-path-webpack/
+        config.resolve.modules.push(path.resolve('./'))
+
         config.node = {
-        Buffer: false
+            Buffer: false
         }
 
         return config
@@ -26,8 +29,9 @@ module.exports = withTypescript(withSourceMaps({
     exportPathMap() {
         return {
             "/": { page: "/" },
-            "/blog/2018-11-28-secure-cloud-storage.html": { page: "/blog/2018-11-28-secure-cloud-storage.html" },
-            "/blog/2017-08-06-when-is-golden-hour.html": { page: "/blog/2017-08-06-when-is-golden-hour.html" },
+            "/blog/2018/11/28/secure-cloud-storage/": { page: "/blog/2018-11-28-secure-cloud-storage.html" },
+            "/blog/2017/08/06/when-is-golden-hour/": { page: "/blog/2017-08-06-when-is-golden-hour.html" },
+            "/blog/2016-09-21-sunset.html": { page: "/blog/2016-09-21-sunset.html" },
         }
     },
 }))

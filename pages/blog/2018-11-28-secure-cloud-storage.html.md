@@ -1,8 +1,7 @@
 ---
 title: Securing Personal Documents in the Cloud with Cryptomator
+created: 2018-11-28
 ---
-
-## Securing Personal Documents in the Cloud with Cryptomator
 
 Personal cloud storage services have become a valuable part of most people's computing lives. Dropbox has served all kinds of roles for me over the almost 9 years I've been using it, including:
 - A glorified public folder to share big files with other people
