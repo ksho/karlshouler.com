@@ -31,6 +31,7 @@ module.exports = withTypescript(withSourceMaps({
             "/": { page: "/" },
             "/blog/2018-11-28-secure-cloud-storage.html": { page: "/blog/2018-11-28-secure-cloud-storage.html" },
             "/blog/2017-08-06-when-is-golden-hour.html": { page: "/blog/2017-08-06-when-is-golden-hour.html" },
+            "/blog/2016-09-21-sunset.html": { page: "/blog/2016-09-21-sunset.html" },
         }
     },
 }))

@@ -9,6 +9,7 @@ import Header from 'src/components/Header';
 const ALL_WRITING_ITEMS = [
     { href: '/blog/2018-11-28-secure-cloud-storage.html', title: 'Securing Personal Documents in the Cloud with Cryptomator' },
     { href: '/blog/2017-08-06-when-is-golden-hour.html', title: 'Building whenisgoldenhour.com' },
+    { href: '/blog/2016-09-21-sunset.html', title: 'Dat Phl Sunset' },
 ];
 
 const PROJECT_ITEMS = [
