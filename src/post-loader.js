@@ -1,4 +1,3 @@
-const execa = require('execa')
 const path = require('path')
 const reactToHast = require('./react-to-hast')
 
@@ -32,7 +31,6 @@ const compileMarkdown = (source) => new Promise((resolve, reject) => {
 const renderPost = (source, resourcePath) => {
   return Promise.all([
     compileMarkdown(source),
-    execa('git', ['log', '-n', '1', '--pretty=format:%ad', '--', resourcePath])
   ]).then((output) => {
     const [ postHast, stats ] = output
     const { slug } = postHast.data

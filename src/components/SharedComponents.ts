@@ -20,14 +20,14 @@ export const Subtitle = styled.div.attrs({
 `;
 
 export const Grid = styled.div.attrs({
-    className: `pt4 w-100 ma2 w-50-ns ml7-ns`,
+    className: `pt4 w-100 ma2 w-50-l ml7-l ml5-m w-70-m pa2`,
 })`
     -webkit-font-smoothing: antialiased; /* Chrome, Safari */
     -moz-osx-font-smoothing: grayscale;
     font-feature-settings: "onum" 1, "pnum" 1, "kern" 1, "ss01" 1;
 `;
 
-export const Body = styled.div.attrs({
+export const Content = styled.div.attrs({
     className: 'baskerville dark-grey',
 })`
     font-size: 18px;
@@ -35,17 +35,23 @@ export const Body = styled.div.attrs({
 `;
 
 export const StyledAnchor = styled.a.attrs({
-    className: `dark-gray link bb hover-gold`,
+    className: `dark-gray link bb hover-gold mb1`,
 })`
     cursor: pointer;
-`
-
-export const ListWrapper = styled.div.attrs({
-    className: `mb1`,
-})``;
+`;
 
 export const Divider = styled.div`
     display: flex;
     justify-content: center;
     margin: 16px 0;
 `;
+
+export const UlNonBulleted = styled.ul`
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 5px;
+`;
+
+export const LiNonBulleted = styled.li.attrs({
+    className: 'mb2',
+})``;

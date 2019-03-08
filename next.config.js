@@ -7,7 +7,7 @@ module.exports = withTypescript(withSourceMaps({
 
     webpack(config, { dev, defaultLoaders }) {
         config.module.rules.push({
-            test: /\.html.md$/,
+            test: /\.md$/,
             include: path.join(__dirname, 'pages/blog'),
             use: [
                 defaultLoaders.babel,
