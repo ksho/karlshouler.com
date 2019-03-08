@@ -3,8 +3,8 @@ import styled from 'styled-components';
 
 import Head from './head';
 import Link from 'next/link'
-import { Content, Divider, Grid, LiNonBulleted, UlNonBulleted, StyledAnchor } from '../src/components/SharedComponents';
-import Header from '../src/components/Header';
+import { Content, Divider, Grid, LiNonBulleted, UlNonBulleted, StyledAnchor } from 'src/components/SharedComponents';
+import Header from 'src/components/Header';
 
 const ALL_WRITING_ITEMS = [
     { href: '/blog/2018-11-28-secure-cloud-storage.html', title: 'Securing Personal Documents in the Cloud with Cryptomator' },

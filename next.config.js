@@ -17,6 +17,9 @@ module.exports = withTypescript(withSourceMaps({
             ]
         })
 
+        // Absolute import paths https://moduscreate.com/blog/es6-es2015-import-no-relative-path-webpack/
+        config.resolve.modules.push(path.resolve('./'))
+
         config.node = {
             Buffer: false
         }
