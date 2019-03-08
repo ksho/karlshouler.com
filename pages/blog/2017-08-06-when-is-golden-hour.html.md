@@ -7,7 +7,7 @@ There are a ton of tools out there for finding sunrise, sunset, golden hour, etc
 
 None of these tools are great at quickly exposing the one time range for so many photographers love most -- golden hour. So was born [whenisgoldenhour.com](http://whenisgoldenhour.com). The site will do its best to grab the city you're standing in, and display the start and end time of golden hour for the current day. That's it.
 
-![screen](../static/images/2017-08-06-whenisgoldenhour/screenshot1.png)
+![screen](/static/images/2017-08-06-whenisgoldenhour/screenshot1.png)
 
 Enjoy!
 
