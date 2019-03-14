@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
 
-import Head from '../../pages/head';
+import Head from 'pages/head';
 
 import { Content, Divider, Grid } from './SharedComponents';
 import Header from './Header';
