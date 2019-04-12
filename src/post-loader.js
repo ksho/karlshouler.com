@@ -35,7 +35,7 @@ const renderPost = (source, resourcePath) => {
     const [ postHast, stats ] = output
     const { slug } = postHast.data
     const props = Object.assign({}, postHast.data, {
-      path: `pages/blog/${slug}.html.js`,
+      path: `pages/blog/${slug}.js`,
       permalink: `blog/${slug}`,
       created: postHast.data.created,
       title: postHast.data.title,

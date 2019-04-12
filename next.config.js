@@ -29,15 +29,16 @@ module.exports = withTypescript(withSourceMaps({
     exportPathMap() {
         return {
             '/': { page: '/' },
+            '/posts': { page: '/posts' },
 
             // Writing
-            '/blog/2018/11/28/secure-cloud-storage/': { page: '/blog/2018-11-28-secure-cloud-storage.html' },
-            '/blog/2017/08/06/when-is-golden-hour/': { page: '/blog/2017-08-06-when-is-golden-hour.html' },
-            '/blog/2015/12/15/mile/': { page: '/blog/2015-12-15-mile.html' },
+            '/blog/2018/11/28/secure-cloud-storage/': { page: '/blog/2018-11-28-secure-cloud-storage' },
+            '/blog/2017/08/06/when-is-golden-hour/': { page: '/blog/2017-08-06-when-is-golden-hour' },
+            '/blog/2015/12/15/mile/': { page: '/blog/2015-12-15-mile' },
 
             // Photos
-            '/blog/2016/09/21/sunset/': { page: '/blog/2016-09-21-sunset.html' },
-            '/blog/2015/05/10/discover-the-railyard/': { page: '/blog/2015-05-10-discover-the-railyard.html' },
+            '/blog/2016/09/21/sunset/': { page: '/blog/2016-09-21-sunset' },
+            '/blog/2015/05/10/discover-the-railyard/': { page: '/blog/2015-05-10-discover-the-railyard' },
 
         }
     },

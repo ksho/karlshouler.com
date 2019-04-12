@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Discover The Railyard
 date: 2015-05-10
 ---

@@ -65,29 +65,31 @@ export default class App extends React.Component {
                     <Header/>
                     <Divider>✷</Divider>
                     <Content>
-                        <div className='f4 mb2 sans-serif'>Writing</div>
+                        <h4 className='fw4 mb1 sans-serif'>Hey! I'm Karl. This is where I share my love of photography, technology, and music.</h4>
+                    </Content>
+                    <Divider>ᐧ ᐧ ᐧ</Divider>
+                    <Content>
+                        <div className='f4 mb2 sans-serif'>Recent things</div>
                         <UlNonBulleted>
                             { this.renderWritingItems(WRITING_ITEMS) }
                         </UlNonBulleted>
+                        <a href='/posts' className='sans-serif f6 gray i no-underline'>..the rest of them</a>
                     </Content>
-                    <Divider>✷</Divider>
+                    <Divider>ᐧ ᐧ ᐧ</Divider>
                     <div className='f4 mb2 sans-serif'>Projects I'm working on</div>
                     <Content>
                         <UlNonBulleted>
                             { this.renderProjectItems() }
-                        {/* <LiNonBulleted><StyledAnchor href='http://engineering.curalate.com'>Curalate</StyledAnchor></LiNonBulleted>
-                        <LiNonBulleted><StyledAnchor href='http://kshopho.com'>Karl Shouler Photography</StyledAnchor></LiNonBulleted>
-                        <LiNonBulleted><StyledAnchor href='https://whenisgoldenhour.com'>whenisgoldenhour.com</StyledAnchor></LiNonBulleted> */}
                         </UlNonBulleted>
                     </Content>
-                    <Divider>✷</Divider>
+                    <Divider>ᐧ ᐧ ᐧ</Divider>
                     <Content>
                         <div className='f4 mb2 sans-serif'>Things I've seen</div>
                         <UlNonBulleted>
                             { this.renderWritingItems(PHOTO_ITEMS) }
                         </UlNonBulleted>
                     </Content>
-                    <Divider>✷</Divider>
+                    <Divider>ᐧ ᐧ ᐧ</Divider>
                     <Content>Find me on <StyledAnchor href='http://instagram.com/_ksho' target='_blank'>Instagram</StyledAnchor>
                         , <StyledAnchor href='http://github.com/ksho' target='_blank'>Github</StyledAnchor>
                         , and <StyledAnchor href='http://twitter.com/_ksho' target='_blank'>Twitter</StyledAnchor>.
