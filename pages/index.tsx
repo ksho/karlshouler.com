@@ -1,10 +1,9 @@
 import * as React from 'react';
 import styled from 'styled-components';
 
-import Head from './head';
 import Link from 'next/link'
-import { Content, Divider, Grid, LiNonBulleted, UlNonBulleted, StyledAnchor } from 'src/components/SharedComponents';
-import Header from 'src/components/Header';
+import { Content, Divider, LiNonBulleted, UlNonBulleted, StyledAnchor } from 'src/components/SharedComponents';
+import PageContainer from 'src/components/PageContainer';
 
 interface LinkItem {
     href: string,
@@ -59,44 +58,39 @@ export default class App extends React.Component {
 
     render() {
         return (
-            <div className='baskerville ma2'>
-                <Head/>
-                <Grid>
-                    <Header/>
-                    <Divider>✷</Divider>
-                    <Content>
-                        <h4 className='fw4 mb1 sans-serif'>Hey! I'm Karl. This is where I share my love of photography, technology, and music.</h4>
-                    </Content>
-                    <Divider>ᐧ ᐧ ᐧ</Divider>
-                    <Content>
-                        <div className='f4 mb2 sans-serif'>Recent things</div>
-                        <UlNonBulleted>
-                            { this.renderWritingItems(WRITING_ITEMS) }
-                        </UlNonBulleted>
-                        <a href='/posts' className='sans-serif f6 gray i no-underline'>..the rest of them</a>
-                    </Content>
-                    <Divider>ᐧ ᐧ ᐧ</Divider>
-                    <div className='f4 mb2 sans-serif'>Projects I'm working on</div>
-                    <Content>
-                        <UlNonBulleted>
-                            { this.renderProjectItems() }
-                        </UlNonBulleted>
-                    </Content>
-                    <Divider>ᐧ ᐧ ᐧ</Divider>
-                    <Content>
-                        <div className='f4 mb2 sans-serif'>Things I've seen</div>
-                        <UlNonBulleted>
-                            { this.renderWritingItems(PHOTO_ITEMS) }
-                        </UlNonBulleted>
-                    </Content>
-                    <Divider>ᐧ ᐧ ᐧ</Divider>
-                    <Content>Find me on <StyledAnchor href='http://instagram.com/_ksho' target='_blank'>Instagram</StyledAnchor>
-                        , <StyledAnchor href='http://github.com/ksho' target='_blank'>Github</StyledAnchor>
-                        , and <StyledAnchor href='http://twitter.com/_ksho' target='_blank'>Twitter</StyledAnchor>.
-                    </Content>
-                </Grid>
-            </div>
-        );
+            <PageContainer>
+                <Content>
+                    <h4 className='fw4 mb1 sans-serif'>Hey! I'm Karl. This is where I share my love of photography, technology, and music.</h4>
+                </Content>
+                <Divider>ᐧ ᐧ ᐧ</Divider>
+                <Content>
+                    <div className='f4 mb2 sans-serif'>Recent things</div>
+                    <UlNonBulleted>
+                        { this.renderWritingItems(WRITING_ITEMS) }
+                    </UlNonBulleted>
+                    <a href='/posts' className='sans-serif f6 gray i no-underline'>..the rest of them</a>
+                </Content>
+                <Divider>ᐧ ᐧ ᐧ</Divider>
+                <div className='f4 mb2 sans-serif'>Projects I'm working on</div>
+                <Content>
+                    <UlNonBulleted>
+                        { this.renderProjectItems() }
+                    </UlNonBulleted>
+                </Content>
+                <Divider>ᐧ ᐧ ᐧ</Divider>
+                <Content>
+                    <div className='f4 mb2 sans-serif'>Things I've seen</div>
+                    <UlNonBulleted>
+                        { this.renderWritingItems(PHOTO_ITEMS) }
+                    </UlNonBulleted>
+                </Content>
+                <Divider>ᐧ ᐧ ᐧ</Divider>
+                <Content>Find me on <StyledAnchor href='http://instagram.com/_ksho' target='_blank'>Instagram</StyledAnchor>
+                    , <StyledAnchor href='http://github.com/ksho' target='_blank'>Github</StyledAnchor>
+                    , and <StyledAnchor href='http://twitter.com/_ksho' target='_blank'>Twitter</StyledAnchor>.
+                </Content>
+            </PageContainer>
+        )
     }
 }
 

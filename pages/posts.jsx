@@ -1,10 +1,8 @@
 import React from 'react'
 import Link from 'next/link';
 
-import Head from 'pages/head';
-
-import { Content, Divider, Grid, StyledAnchor } from 'src/components/SharedComponents';
-import Header from 'src/components/Header';
+import PageContainer from 'src/components/PageContainer';
+import { StyledAnchor } from 'src/components/SharedComponents';
 
 export default class extends React.Component {
     static async getInitialProps() {
@@ -40,24 +38,18 @@ export default class extends React.Component {
 
     render() {
         return (
-            <div className='baskerville ma2'>
-                <Head/>
-                <Grid>
-                    <Header/>
-                    <Divider>✷</Divider>
-                    
-                    {this.props.posts.map(({ title, slug, url, date }) => 
-                        (
-                            <div className='mb3'>
-                                <StyledAnchor href={url} key={slug}>
-                                    <span className='sans-serif fw4'>{title}</span>
-                                </StyledAnchor>
-                                <span className='ml2 sans-serif f7 moon-gray'>{date}</span>
-                            </div>
-                        )
-                    )}
-                </Grid>
-            </div>
+            <PageContainer>
+                {this.props.posts.map(({ title, slug, url, date }) => 
+                    (
+                        <div className='mb3'>
+                            <StyledAnchor href={url} key={slug}>
+                                <span className='sans-serif fw4'>{title}</span>
+                            </StyledAnchor>
+                            <span className='ml2 sans-serif f7 moon-gray'>{date}</span>
+                        </div>
+                    )
+                )}
+            </PageContainer>
         )
     }
 }

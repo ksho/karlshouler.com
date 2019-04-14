@@ -1,10 +1,9 @@
 import React from 'react'
 import styled from 'styled-components';
 
-import Head from 'pages/head';
+import PageContainer from 'src/components/PageContainer';
+import { Content } from './SharedComponents';
 
-import { Content, Divider, Grid } from './SharedComponents';
-import Header from './Header';
 interface IOwnState {
     title: string;
     created: string;
@@ -15,20 +14,15 @@ export default class Post extends React.Component<IOwnState> {
     render() {
         const { title, created, children } = this.props;
         return (
-            <div className='baskerville ma2'>
-                <Head/>
-                <Grid>
-                    <Header/>
-                    <Divider>✷</Divider>
-                    <PostMeta>
-                        <h2 className='sans-serif lh-title fw3 ma0'>{title}</h2>
-                        <CreatedTime>{created}</CreatedTime>
-                    </PostMeta>
-                    <Content>
-                        {children}
-                    </Content>
-                </Grid>
-            </div>
+            <PageContainer>
+                <PostMeta>
+                    <h2 className='sans-serif lh-title fw3 ma0'>{title}</h2>
+                    <CreatedTime>{created}</CreatedTime>
+                </PostMeta>
+                <Content>
+                    {children}
+                </Content>
+            </PageContainer>
         );
     }
 }

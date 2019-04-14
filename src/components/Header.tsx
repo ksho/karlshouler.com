@@ -7,8 +7,8 @@ export default class Header extends React.Component {
     public renderNavigation() {
         return (
             <NavigationContainer>
-                <div>Writing</div>
-                <div>Photography</div>
+                <div><NavLink href='/posts'>Writing</NavLink></div>
+                <div><NavLink href='https://kshopho.com' target='_blank'>Photography</NavLink></div>
                 <div>Contact</div>
             </NavigationContainer>
         );
@@ -33,3 +33,7 @@ const NavigationContainer = styled.div.attrs({
     justify-content: space-between;
     margin-top: 10px;
 `;
+
+const NavLink = styled.a.attrs({
+    className: 'near-black hover-gold'
+})``;
