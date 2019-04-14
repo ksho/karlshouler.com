@@ -34,11 +34,15 @@ const renderPost = (source, resourcePath) => {
   ]).then((output) => {
     const [ postHast, stats ] = output
     const { slug } = postHast.data
+    const tags = postHast.data.categories ? JSON.parse(postHast.data.categories) : []
+    const title = postHast.data.title.replace(/["]+/g, '');
+    const dateCreated = (postHast.data.created || postHast.data.date).split(' ')[0];
     const props = Object.assign({}, postHast.data, {
       path: `pages/blog/${slug}.js`,
       permalink: `blog/${slug}`,
-      created: postHast.data.created,
-      title: postHast.data.title,
+      created: dateCreated,
+      title: title,
+      tags: tags,
     })
     return postTemplate(props, postHast.contents)
   })
