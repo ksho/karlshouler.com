@@ -25,7 +25,7 @@ Despite knowing I "have nothing to hide", it's not enough to trust any of these 
 
 Knowing all that, what are we left with? How can we get the benefits of these best-in-class syncing/storage services while not leaving ourselves open to data compromise? I've gotten a lot of value out of being to access sensitive documents away from home -- I'm at work, booking a flight and need my passport number; on the phone with insurance, need to reference an old EOB; on vacation a week before closing on a house, needing to coordinate settlement docs (yeah, not recommended, but we did this). You get it. The convenience of having this type of access is the promise of the internet come true. Tossing all of these up on Dropbox is pretty risky though.
 
-Let's consider the requirements we need to fill:  
+### Consider the requirements we need to fill
 - Files need to be encrypted client-side with a key I generate (and am responsible for) prior to upload.  
 - Files can be accessed and viewed from at least macOS and iOS.  
 - Files can be added with minimal friction from iOS -- I scan documents with my phone as soon as they come in the mail and upload them to the cloud before shredding.  

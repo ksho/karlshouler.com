@@ -6,10 +6,12 @@ export const Title = styled.a.attrs({
 })`
     color: #f7f7f7;
     text-decoration: none;
-    text-shadow: 4px -4px #3a48af, 8px -8px #3ed8f1;
+    /* text-shadow: 4px -4px #3a48af, 8px -8px #3ed8f1; */
     /* text-shadow: 4px -4px #3a48af, 8px -8px #df35ea; */
+    text-shadow: -4px -4px #3a48af, 4px 4px #3ed8f1;
     font-weight: 900;
     letter-spacing: 3px;
+    padding-left: 2px;
 `;
 
 export const Subtitle = styled.div.attrs({
