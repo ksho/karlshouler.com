@@ -42,9 +42,9 @@ export default class extends React.Component {
                 {this.props.posts.map(({ title, slug, url, date }) => 
                     (
                         <div className='mb3'>
-                            <StyledAnchor href={url} key={slug}>
-                                <span className='sans-serif fw4'>{title}</span>
-                            </StyledAnchor>
+                            <Link href={url} as={url}>
+                                <StyledAnchor className='sans-serif fw4'>{title}</StyledAnchor>
+                            </Link>
                             <span className='ml2 sans-serif f7 moon-gray'>{date}</span>
                         </div>
                     )

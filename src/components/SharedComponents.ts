@@ -22,7 +22,7 @@ export const Subtitle = styled.div.attrs({
 `;
 
 export const Grid = styled.div.attrs({
-    className: `pt4 w-100 ma2 w-50-l ml7-l ml5-m w-70-m pa2`,
+    className: `pt4 w-100 w-50-l ml7-l ml5-m w-70-m pa3`,
 })`
     -webkit-font-smoothing: antialiased; /* Chrome, Safari */
     -moz-osx-font-smoothing: grayscale;
