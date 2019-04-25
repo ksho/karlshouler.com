@@ -3,7 +3,7 @@ layout: post
 title: "A Quick Retreat from the Noise."
 date: 2014-09-30
 comments: true
-categories: ["photo"]
+categories: ["travel"]
 ---
 
 Philadelphia is a great place to be on the weekend -- one of my prized Saturday and Sunday activities is wandering the streets for no other reason than the act itself. It has become a practice in slowing down.

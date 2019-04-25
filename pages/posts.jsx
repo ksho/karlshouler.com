@@ -18,7 +18,7 @@ export default class extends React.Component {
                 const value = values[index];
 
                 const title = value.default().props.title;
-                const url = `/blog/${slug}`;
+                const url = `/blog/${slug}/`;
                 const created = value.default().props.created;
                 const tags = value.default().props.tags;
 
@@ -44,9 +44,13 @@ export default class extends React.Component {
         const postList = _(this.props.posts).sortBy((i) => {
             return i.created;
         }).reverse();
+
+        const nonPhotoPosts = _(postList).reject((i) => {
+            return i.tags && _(i.tags).contains('photo');
+        });
         return (
             <PageContainer>
-                {postList.map(({ title, slug, url, created, tags }) => 
+                { postList.map(({ title, slug, url, created, tags }) =>
                     (
                         <div className='mb3' key={slug}>
                             <Link href={url} as={url}>
@@ -56,7 +60,7 @@ export default class extends React.Component {
                             <span className='ml2 sans-serif f7 moon-gray'>{tags.join(', ')}</span>
                         </div>
                     )
-                )}
+                ) }
             </PageContainer>
         )
     }
