@@ -38,8 +38,8 @@ const renderPost = (source, resourcePath) => {
     const title = postHast.data.title.replace(/["]+/g, '');
     const dateCreated = (postHast.data.created || postHast.data.date).split(' ')[0];
     const props = Object.assign({}, postHast.data, {
-      path: `pages/blog/${slug}.js`,
-      permalink: `blog/${slug}`,
+      path: `pages/posts/${slug}.js`,
+      permalink: `posts/${slug}`,
       created: dateCreated,
       title: title,
       tags: tags,

@@ -18,7 +18,7 @@ export default class extends React.Component {
                 const value = values[index];
 
                 const title = value.default().props.title;
-                const url = `/blog/${slug}/`;
+                const url = `/posts/${slug}`;
                 const created = value.default().props.created;
                 const tags = value.default().props.tags;
 
@@ -32,7 +32,7 @@ export default class extends React.Component {
             });
 
             return data;
-        })(require.context('./blog', true, /\.md$/));
+        })(require.context('./posts', true, /\.md$/));
 
         return {
             posts
