@@ -11,14 +11,14 @@ interface LinkItem {
 }
 
 const WRITING_ITEMS: LinkItem[] = [
-    { href: '/blog/2018/11/28/secure-cloud-storage/', title: 'Securing Personal Documents in the Cloud with Cryptomator' },
-    { href: '/blog/2017/08/06/when-is-golden-hour/', title: 'Building whenisgoldenhour.com' },
-    { href: '/blog/2015/12/15/mile/', title: 'M.I.L.E.' },
+    { href: '/posts/2018-11-28-secure-cloud-storage/', title: 'Securing Personal Documents in the Cloud with Cryptomator' },
+    { href: '/posts/2017-08-06-when-is-golden-hour/', title: 'Building whenisgoldenhour.com' },
+    { href: '/posts/2015-12-15-mile/', title: 'M.I.L.E.' },
 ];
 
 const PHOTO_ITEMS: LinkItem[] = [
-    { href: '/blog/2016/09/21/sunset/', title: 'Dat Phl Sunset' },
-    { href: '/blog/2015/05/10/discover-the-railyard/', title: 'Discover the Railyard' },
+    { href: '/posts/2016-09-21-sunset/', title: 'Dat Phl Sunset' },
+    { href: '/posts/2015-05-10-discover-the-railyard/', title: 'Discover the Railyard' },
 ];
 
 const PROJECT_ITEMS: LinkItem[] = [
@@ -60,7 +60,7 @@ export default class App extends React.Component {
         return (
             <PageContainer>
                 <Content>
-                    <h4 className='fw4 mb1 sans-serif'>Hey! I'm Karl. This is where I share my love of photography, technology, and music.</h4>
+                    <h4 className='fw4 mb1 sans-serif'>Hey! I'm Karl. This is where I share my love of technology, photography, and music.</h4>
                 </Content>
                 <Divider>ᐧ ᐧ ᐧ</Divider>
                 <Content>
