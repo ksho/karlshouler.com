@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { Subtitle, Title } from './SharedComponents';
+import Link from 'next/link'
+import { Title } from './SharedComponents';
 import styled from 'styled-components';
 
 export default class Header extends React.Component {
@@ -7,7 +8,7 @@ export default class Header extends React.Component {
     public renderNavigation() {
         return (
             <NavigationContainer>
-                <div><NavLink href='/posts'>Writing</NavLink></div>
+                <div><Link href='/posts'><NavLink>Writing</NavLink></Link></div>
                 <div><NavLink href='https://kshopho.com' target='_blank'>Photography</NavLink></div>
                 <div>Contact</div>
             </NavigationContainer>
@@ -35,5 +36,7 @@ const NavigationContainer = styled.div.attrs({
 `;
 
 const NavLink = styled.a.attrs({
-    className: 'near-black hover-gold'
-})``;
+    className: 'near-black hover-gold link underline'
+})`
+    cursor: pointer;
+`;
