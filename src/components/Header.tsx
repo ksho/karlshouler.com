@@ -36,5 +36,7 @@ const NavigationContainer = styled.div.attrs({
 `;
 
 const NavLink = styled.a.attrs({
-    className: 'near-black hover-gold'
-})``;
+    className: 'near-black hover-gold link underline'
+})`
+    cursor: pointer;
+`;
