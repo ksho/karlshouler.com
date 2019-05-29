@@ -68,7 +68,7 @@ export default class App extends React.Component {
                         { this.renderWritingItems(WRITING_ITEMS) }
                     </UlNonBulleted>
                     <Link href='/posts' as='/posts'>
-                        <span className='sans-serif f6 gray i no-underline'>..the rest of them</span>
+                        <span className='sans-serif f6 gray i no-underline pointer'>..the rest of them</span>
                     </Link>
                 </Content>
                 <Divider>ᐧ ᐧ ᐧ</Divider>
