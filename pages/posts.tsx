@@ -1,21 +1,35 @@
 import React from 'react'
 import Link from 'next/link';
 import _ from 'underscore';
+import styled from 'styled-components';
 
 import PageContainer from 'src/components/PageContainer';
-import { StyledAnchor } from 'src/components/SharedComponents';
 
-export default class extends React.Component {
+interface IOwnState {
+    posts: Post[],
+    children: unknown,
+}
+
+interface Post {
+    title: string,
+    slug: string,
+    url: string,
+    created: string,
+    tags: string[],
+}
+
+export default class Posts extends React.Component<IOwnState> {
+
     static async getInitialProps() {
         // Get posts from folder
         const posts = (ctx => {
             const keys = ctx.keys();
             const values = keys.map(ctx);
 
-            const data = keys.map((key, index) => {
+            const data = keys.map((key: string, index: number) => {
                 // Create slug from file name
                 const slug = key.replace(/^.*[\\\/]/, '').split('.').slice(0, -1).join('.');
-                const value = values[index];
+                const value: any = values[index];
 
                 const title = value.default().props.title;
                 const url = `/posts/${slug}`;
@@ -40,21 +54,22 @@ export default class extends React.Component {
     }
 
     render() {
+        const { posts } = this.props;
         // List posts with the most recent one first.
-        const postList = _(this.props.posts).sortBy((i) => {
+        const postList = _(posts).sortBy((i) => {
             return i.created;
         }).reverse();
 
-        const nonPhotoPosts = _(postList).reject((i) => {
-            return i.tags && _(i.tags).contains('photo');
-        });
+        // const nonPhotoPosts = _(postList).reject((i) => {
+        //     return i.tags && _(i.tags).contains('photo');
+        // });
         return (
             <PageContainer>
                 { postList.map(({ title, slug, url, created, tags }) =>
                     (
                         <div className='mb3' key={slug}>
                             <Link href={url} as={url}>
-                                <StyledAnchor className='sans-serif fw4'>{title}</StyledAnchor>
+                                <PostLinkTitle>{title}</PostLinkTitle>
                             </Link>
                             <span className='ml2 sans-serif f7 light-silver'>{created}</span>
                             <span className='ml2 sans-serif f7 moon-gray'>{tags.join(', ')}</span>
@@ -65,3 +80,9 @@ export default class extends React.Component {
         )
     }
 }
+
+export const PostLinkTitle = styled.span.attrs({
+    className: `sans-serif fw4 dark-gray link hover-gold mb1`,
+})`
+    cursor: pointer;
+`;

@@ -6,6 +6,8 @@
     "export": "next build && next export"
   },
   "devDependencies": {
+    "@types/underscore": "^1.8.18",
+    "@types/webpack-env": "^1.13.9",
     "babel-plugin-styled-components": "^1.10.0",
     "typescript": "^3.4.5"
   },

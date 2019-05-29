@@ -27,15 +27,12 @@ export default class Post extends React.Component<IOwnState> {
     }
 }
 
-const PostMeta = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-`;
+const PostMeta = styled.div``;
 
 const CreatedTime = styled.div.attrs({
     className: `sans-serif f7`,
 })`
     color: #797979;
     font-weight: 500;
+    margin-top: 8px;
 `;
