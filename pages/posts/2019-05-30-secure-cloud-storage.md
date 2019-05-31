@@ -1,6 +1,6 @@
 ---
 title: Securing Personal Documents in the Cloud with Cryptomator
-created: 2018-11-28
+created: 2019-05-30
 categories: ["backup", "privacy", "storage"]
 ---
 
