@@ -18,6 +18,7 @@ const WRITING_ITEMS: LinkItem[] = [
 const PHOTO_ITEMS: LinkItem[] = [
     { href: '/posts/2016-09-21-sunset', title: 'Dat Phl Sunset' },
     { href: '/posts/2015-05-10-discover-the-railyard', title: 'Discover the Railyard' },
+    { href: '/posts/2014-09-30-a-quick-retreat-from-the-noise', title: 'A Quick Retreat from the Noise'}
 ];
 
 const PROJECT_ITEMS: LinkItem[] = [
@@ -58,9 +59,7 @@ export default class App extends React.Component {
     render() {
         return (
             <PageContainer>
-                <Content>
-                    <h4 className='fw4 mb1 sans-serif'>Hey! I'm Karl. This is where I share my love of technology, photography, and music.</h4>
-                </Content>
+                <h4 className='fw4 mb1 sans-serif'>Hey! I'm Karl. This is where I share my love of technology, photography, and music.</h4>
                 <Divider>ᐧ ᐧ ᐧ</Divider>
                 <Content>
                     <div className='f4 mb2 sans-serif'>Recent things</div>

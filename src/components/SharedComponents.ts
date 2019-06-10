@@ -32,7 +32,7 @@ export const Grid = styled.div.attrs({
 export const Content = styled.div.attrs({
     className: 'baskerville dark-grey',
 })`
-    font-size: 18px;
+    font-size: 19px;
     margin-bottom: 16px;
 `;
 
