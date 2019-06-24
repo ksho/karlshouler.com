@@ -43,7 +43,7 @@ I wanted to like these guys since our values are aligned, and went back to their
 Software like ownCloud, resiliosync, bittorrent sync, and nextCloud all do some flavor of this. Problem here is general cross-platform compatibility and bulletproof syncing. If I'm hosting this server from my house and the power goes out, the whole thing breaks down. Dropbox and iCloud are at the point where I drop a file in and it shows up everywhere else more or less immediately -- they're the best at this, and I'm not interested in playing somewhere else.
 
 ### What it comes down to
-We need some app that encrypts files client-side on a per-file basis, and has native decryption on both mac and iOS. Enter, Cryptomator.
+We need some app that encrypts files client-side on a per-file basis, and has native decryption on both mac and iOS. Enter, <a href="https://cryptomator.org" target="_blank">Cryptomator</a>.
 
 How it works is, you specify a folder that will hold your files and create an encryption key. It then locally mounts a virtual volume where you add/modify decrypted versions of your files. When you update a file in the virtual drive, it encrypts it, and sends it over to the local cloud location.. at which point, iCloud will sync that encrypted file up to the web. On iOS, there's a cryptomator app that you can paste in your decryption key (memorized or stored somewhere like 1password), and it will show you your decrypted files -- you can also enable Touch ID for decryption, which makes this flow super easy.
 
