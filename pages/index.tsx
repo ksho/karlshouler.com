@@ -15,12 +15,6 @@ const WRITING_ITEMS: LinkItem[] = [
     { href: '/posts/2015-12-15-mile', title: 'M.I.L.E.' },
 ];
 
-const PHOTO_ITEMS: LinkItem[] = [
-    { href: '/posts/2016-09-21-sunset', title: 'Dat Phl Sunset' },
-    { href: '/posts/2015-05-10-discover-the-railyard', title: 'Discover the Railyard' },
-    { href: '/posts/2014-09-30-a-quick-retreat-from-the-noise', title: 'A Quick Retreat from the Noise'}
-];
-
 const PROJECT_ITEMS: LinkItem[] = [
     { href: 'http://engineering.curalate.com', title: 'Curalate' },
     { href: 'http://kshopho.com', title: 'Karl Shouler Photography' },
@@ -75,13 +69,6 @@ export default class App extends React.Component {
                 <Content>
                     <UlNonBulleted>
                         { this.renderProjectItems() }
-                    </UlNonBulleted>
-                </Content>
-                <Divider>ᐧ ᐧ ᐧ</Divider>
-                <Content>
-                    <div className='f4 mb2 sans-serif'>Things I've seen</div>
-                    <UlNonBulleted>
-                        { this.renderWritingItems(PHOTO_ITEMS) }
                     </UlNonBulleted>
                 </Content>
                 <Divider>ᐧ ᐧ ᐧ</Divider>
