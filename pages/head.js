@@ -20,4 +20,15 @@ export default ({
         <link rel="icon" type="image/png" sizes="32x32" href="/static/images/favicon/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/static/images/favicon/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-252321-2"></script>
+        <script>
+            {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+
+                gtag('config', 'UA-252321-2');
+            `}
+        </script>
     </Head>
