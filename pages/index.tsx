@@ -10,6 +10,7 @@ interface LinkItem {
 }
 
 const WRITING_ITEMS: LinkItem[] = [
+    { href: '/posts/2019-08-10-when-is-golden-hour-updates', title: 'whenisgoldenhour; now with HTTPS and React' },
     { href: '/posts/2019-05-31-secure-cloud-storage', title: 'Securing Personal Documents in the Cloud with Cryptomator' },
     { href: '/posts/2017-08-06-when-is-golden-hour', title: 'Building whenisgoldenhour.com' },
     { href: '/posts/2015-12-15-mile', title: 'M.I.L.E.' },
