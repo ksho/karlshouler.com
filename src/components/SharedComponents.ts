@@ -2,8 +2,9 @@ import styled from 'styled-components';
 
 // Tachyons + styled-components -- https://medium.com/@jikkujose/tachyons-styled-components-pure-joy-6173d3888548
 export const Title = styled.a.attrs({
-    className: 'sans-serif f1',
+    className: 'f1',
 })`
+    font-family: -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", 'Inter', "Helvetica Neue", sans-serif;
     color: #f7f7f7;
     text-decoration: none;
     /* text-shadow: 4px -4px #3a48af, 8px -8px #3ed8f1; */
