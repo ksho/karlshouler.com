@@ -32,7 +32,7 @@ export default class Posts extends React.Component<IOwnState> {
                 const value: any = values[index];
 
                 const title = value.default().props.title;
-                const url = `/posts/${slug}`;
+                const url = `/posts/${slug}/`;
                 const created = value.default().props.created;
                 const tags = value.default().props.tags;
 
