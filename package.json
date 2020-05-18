@@ -4,7 +4,8 @@
     "build": "next build",
     "start": "next start",
     "export": "next build && next export",
-    "deploy": "aws s3 sync out/ s3://karlshouler.com --acl public-read --profile default",
+    "stage": "aws s3 sync out/ s3://staging.karlshouler.com --delete --acl public-read --profile default",
+    "deploy": "aws s3 sync out/ s3://karlshouler.com --delete --acl public-read --profile default",
     "invalidate": "aws cloudfront create-invalidation --distribution-id E8R5YE3OU9K84 --paths '/*' --profile default",
     "shipit": "npm run deploy && npm run invalidate"
   },
