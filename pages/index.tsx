@@ -54,8 +54,8 @@ export default class App extends React.Component {
     render() {
         return (
             <PageContainer>
-                <h4 className='fw4 mb1 sans-serif'>Hey! I'm Karl. This is where I share my love of technology, photography, and music.</h4>
-                <Divider>ᐧ ᐧ ᐧ</Divider>
+                {/* <h4 className='fw4 mb1 sans-serif'>Hey! I'm Karl. This is where I share my love of technology, photography, and music.</h4> */}
+                {/* <Divider>ᐧ ᐧ ᐧ</Divider> */}
                 <Content>
                     <div className='f4 mb2 sans-serif'>Recent things</div>
                     <UlNonBulleted>
