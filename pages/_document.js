@@ -17,7 +17,7 @@ export default class MyDocument extends Document {
                 <Head>
                 {this.props.styleTags}
                 </Head>
-                <body style={bodyStyle}>
+                <body style={bodyStylePop}>
                     <Main />
                     <NextScript />
                 </body>
@@ -26,7 +26,11 @@ export default class MyDocument extends Document {
     }
 }
 
-const bodyStyle = {
-    // backgroundColor: '#f7f7f7',
+const bodyStyleWarm = {
+    background: 'fixed linear-gradient(#d8a158, 95%, #2d2d2d)'
+}
+
+const bodyStylePop = {
+    // background: 'fixed linear-gradient(#acbad8, 95%, pink)'
     background: 'fixed linear-gradient(#f7f7f7, 85%, pink)'
 }

@@ -71,8 +71,8 @@ export default class Posts extends React.Component<IOwnState> {
                             <Link href={url} as={url}>
                                 <PostLinkTitle>{title}</PostLinkTitle>
                             </Link>
-                            <span className='ml2 sans-serif f7 light-silver'>{created}</span>
-                            <span className='ml2 sans-serif f7 moon-gray'>{tags.join(', ')}</span>
+                            <Created>{created}</Created>
+                            <Tags>{tags.join(', ')}</Tags>
                         </div>
                     )
                 ) }
@@ -86,3 +86,21 @@ export const PostLinkTitle = styled.span.attrs({
 })`
     cursor: pointer;
 `;
+
+export const CreatedWarm = styled.span.attrs({
+    className: `ml2 sans-serif f7 mid-gray`,
+})``;
+
+export const Created = styled.span.attrs({
+    className: `ml2 sans-serif f7 light-silver`,
+})``;
+
+export const TagsWarm = styled.span.attrs({
+    className: `ml2 sans-serif f7`,
+})`
+    color: #ffd499
+`;
+
+export const Tags = styled.span.attrs({
+    className: `ml2 sans-serif f7 moon-gray`,
+})``;

@@ -15,6 +15,20 @@ export const Title = styled.a.attrs({
     padding-left: 2px;
 `;
 
+export const TitleWarm = styled.a.attrs({
+    className: 'f1',
+})`
+    font-family: -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", 'Inter', "Helvetica Neue", sans-serif;
+    color: #d8a158;
+    text-decoration: none;
+    /* text-shadow: 4px -4px #3a48af, 8px -8px #3ed8f1; */
+    /* text-shadow: 4px -4px #3a48af, 8px -8px #df35ea; */
+    text-shadow: -4px -4px #f9c888, 4px 4px #1e1f1f;
+    font-weight: 900;
+    letter-spacing: 3px;
+    padding-left: 2px;
+`;
+
 export const Subtitle = styled.div.attrs({
     className: 'sans-serif f5 dark-grey',
 })`
@@ -31,10 +45,12 @@ export const Grid = styled.div.attrs({
 `;
 
 export const Content = styled.div.attrs({
-    className: 'baskerville dark-grey',
+    className: 'sans-serif dark-grey',
 })`
-    font-size: 19px;
+    /* font-family: 'Montserrat', sans-serif; */
+    font-size: 16px;
     margin-bottom: 16px;
+    font-weight: 300;
 `;
 
 export const StyledAnchor = styled.a.attrs({
