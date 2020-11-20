@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Link from 'next/link'
-import { Title } from './SharedComponents';
+import { TitleWarm, Title } from './SharedComponents';
 import styled from 'styled-components';
 
 export default class Header extends React.Component {
