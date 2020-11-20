@@ -32,5 +32,5 @@ const bodyStyleWarm = {
 
 const bodyStylePop = {
     // background: 'fixed linear-gradient(#acbad8, 95%, pink)'
-    background: 'fixed linear-gradient(#f7f7f7, 85%, pink)'
+    background: 'fixed linear-gradient(#f7f7f7, 85%, #517efd)'
 }

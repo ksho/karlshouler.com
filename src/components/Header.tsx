@@ -18,7 +18,7 @@ export default class Header extends React.Component {
     public render() {
         return (
             <div>
-                <Title href='/'>KARL SHOULER.</Title>
+                <Title href='/'>KARL SHOULER</Title>
                 {/* <Subtitle>Moving bits around, shooting photos, writing songs.</Subtitle> */}
                 {/* <Subtitle>This is where I share my thoughts on technology, photography, and music.</Subtitle> */}
                 { this.renderNavigation() }
@@ -36,7 +36,8 @@ const NavigationContainer = styled.div.attrs({
 `;
 
 const NavLink = styled.a.attrs({
-    className: 'near-black hover-gold link underline'
+    className: 'near-black hover-gold link'
 })`
     cursor: pointer;
+    font-weight: 500;
 `;
