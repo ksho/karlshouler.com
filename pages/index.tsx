@@ -10,6 +10,7 @@ interface LinkItem {
 }
 
 const WRITING_ITEMS: LinkItem[] = [
+    { href: '/posts/2020-11-02-x100v', title: 'The Fuji X100S (and V); On Upgrading High Value Objects' },
     { href: '/posts/2019-08-10-when-is-golden-hour-updates', title: 'whenisgoldenhour; now with HTTPS and React' },
     { href: '/posts/2019-05-31-secure-cloud-storage', title: 'Securing Personal Documents in the Cloud with Cryptomator' },
     { href: '/posts/2017-08-06-when-is-golden-hour', title: 'Building whenisgoldenhour.com' },
