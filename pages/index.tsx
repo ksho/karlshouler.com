@@ -7,6 +7,7 @@ import PageContainer from 'src/components/PageContainer';
 interface LinkItem {
     href: string,
     title: string,
+    description?: string,
 }
 
 const WRITING_ITEMS: LinkItem[] = [
@@ -19,8 +20,9 @@ const WRITING_ITEMS: LinkItem[] = [
 
 const PROJECT_ITEMS: LinkItem[] = [
     { href: 'http://engineering.curalate.com', title: 'Curalate' },
-    { href: 'http://kshopho.com', title: 'Karl Shouler Photography' },
+    { href: 'https://beartrap.email', title: 'Bear Trap', description: 'Daily email service for stock futures and insights' },
     { href: 'https://whenisgoldenhour.com', title: 'whenisgoldenhour.com' },
+    { href: 'http://kshopho.com', title: 'Karl Shouler Photography' },
 ];
 
 export default class App extends React.Component {
@@ -46,6 +48,11 @@ export default class App extends React.Component {
                         <StyledAnchor href={i.href} target='_blank'>
                             {i.title}
                         </StyledAnchor>
+                        { i.description &&
+                            <span className='gray f7'>
+                                &nbsp;&nbsp;{i.description}
+                            </span>
+                        }
                     </LiNonBulleted>
                 )
             })
@@ -63,11 +70,11 @@ export default class App extends React.Component {
                         { this.renderWritingItems(WRITING_ITEMS) }
                     </UlNonBulleted>
                     <Link href='/posts' as='/posts'>
-                        <span className='hover-gold sans-serif f6 gray i no-underline pointer'>..the rest of them</span>
+                        <span className='hover-gold link sans-serif f6 gray i no-underline pointer'>..the rest of them</span>
                     </Link>
                 </Content>
                 <Divider>ᐧ ᐧ ᐧ</Divider>
-                <div className='f4 mb2 sans-serif'>Projects I'm working on</div>
+                <div className='f4 mb2 sans-serif'>Working on..</div>
                 <Content>
                     <UlNonBulleted>
                         { this.renderProjectItems() }
