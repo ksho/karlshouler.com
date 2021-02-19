@@ -19,9 +19,9 @@ const WRITING_ITEMS: LinkItem[] = [
 ];
 
 const PROJECT_ITEMS: LinkItem[] = [
-    { href: 'http://engineering.curalate.com', title: 'Curalate' },
+    { href: 'http://curalate.com', title: 'Curalate', description: 'Acquired by Bazaarvoice' },
     { href: 'https://beartrap.email', title: 'Bear Trap', description: 'Daily email service for stock futures and insights' },
-    { href: 'https://whenisgoldenhour.com', title: 'whenisgoldenhour.com' },
+    { href: 'https://whenisgoldenhour.com', title: 'whenisgoldenhour.com', description: 'Golden hour, where you\'re standing' },
     { href: 'http://kshopho.com', title: 'Karl Shouler Photography' },
 ];
 
