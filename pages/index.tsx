@@ -8,6 +8,7 @@ interface LinkItem {
     href: string,
     title: string,
     description?: string,
+    past?: boolean,
 }
 
 const WRITING_ITEMS: LinkItem[] = [
@@ -19,10 +20,12 @@ const WRITING_ITEMS: LinkItem[] = [
 ];
 
 const PROJECT_ITEMS: LinkItem[] = [
-    { href: 'http://curalate.com', title: 'Curalate', description: 'Acquired by Bazaarvoice' },
+    { href: 'http://thirtymadison.com', title: 'Thirty Madison' },
     { href: 'https://beartrap.email', title: 'Bear Trap', description: 'Daily email service for stock futures and insights' },
     { href: 'https://whenisgoldenhour.com', title: 'whenisgoldenhour.com', description: 'Golden hour, where you\'re standing' },
     { href: 'http://kshopho.com', title: 'Karl Shouler Photography' },
+    { href: 'http://curalate.com', title: 'Curalate', description: 'Acquired by Bazaarvoice', past: true },
+    { href: 'http://monetate.com', title: 'Monetate', description: 'Acquired by Kibo Commerce', past: true },
 ];
 
 export default class App extends React.Component {
@@ -45,6 +48,9 @@ export default class App extends React.Component {
             PROJECT_ITEMS.map((i) => {
                 return (
                     <LiNonBulleted key={i.href}>
+                        {i.past &&
+                            <span>*</span>
+                        }
                         <StyledAnchor href={i.href} target='_blank'>
                             {i.title}
                         </StyledAnchor>
@@ -79,6 +85,7 @@ export default class App extends React.Component {
                     <UlNonBulleted>
                         { this.renderProjectItems() }
                     </UlNonBulleted>
+                    <div><span>* </span><span className='f7'>past work</span></div>
                 </Content>
                 <Divider>ᐧ ᐧ ᐧ</Divider>
                 <Content>Find me on <StyledAnchor href='http://instagram.com/_ksho' target='_blank'>Instagram</StyledAnchor>
