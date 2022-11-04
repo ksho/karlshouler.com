@@ -23,7 +23,7 @@ export default class Posts extends React.Component<IOwnState> {
     static async getInitialProps() {
         // Get posts from folder
         const posts = (ctx => {
-            const keys = ctx.keys();
+            const keys = ctx.keys().filter(k => k.startsWith('./'));
             const values = keys.map(ctx);
 
             const data = keys.map((key: string, index: number) => {
@@ -49,7 +49,7 @@ export default class Posts extends React.Component<IOwnState> {
         })(require.context('./posts', true, /\.md$/));
 
         return {
-            posts
+            posts,
         };
     }
 
