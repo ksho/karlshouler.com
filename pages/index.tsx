@@ -34,8 +34,8 @@ export default class App extends React.Component {
             items.map((i) => {
                 return (
                     <LiNonBulleted key={i.href}>
-                        <Link href={i.href} as={i.href}>
-                            <StyledAnchor>{i.title}</StyledAnchor>
+                        <Link href={i.href} as={i.href} style={{cursor: "pointer", textDecoration: "none"}} className={`dark-gray link bb hover-gold mb1`}>
+                            <span>{i.title}</span>
                         </Link>
                     </LiNonBulleted>
                 )
@@ -71,12 +71,12 @@ export default class App extends React.Component {
                 {/* <h4 className='fw4 mb1 sans-serif'>Hey! I'm Karl. This is where I share my love of technology, photography, and music.</h4>
                 <Divider>ᐧ ᐧ ᐧ</Divider> */}
                 <Content>
-                    <div className='f4 mb2 sans-serif'>Recent things</div>
+                    <div className='f4 mb2 sans-serif'>Recents</div>
                     <UlNonBulleted>
                         { this.renderWritingItems(WRITING_ITEMS) }
                     </UlNonBulleted>
-                    <Link href='/posts' as='/posts'>
-                        <span className='hover-gold link sans-serif f6 gray i no-underline pointer'>..the rest of them</span>
+                    <Link href='/posts' as='/posts' className='hover-gold link sans-serif f6 gray i no-underline pointer'>
+                        <span>..the rest of them</span>
                     </Link>
                 </Content>
                 <Divider>ᐧ ᐧ ᐧ</Divider>

@@ -68,8 +68,8 @@ export default class Posts extends React.Component<IOwnState> {
                 { postList.map(({ title, slug, url, created, tags }) =>
                     (
                         <div className='mb3' key={slug}>
-                            <Link href={url} as={url}>
-                                <PostLinkTitle>{title}</PostLinkTitle>
+                            <Link href={url} as={url} style={{cursor: "pointer", textDecoration: "none"}} className={`sans-serif fw4 dark-gray link hover-gold mb1`}>
+                                <span>{title}</span>
                             </Link>
                             <Created>{created}</Created>
                             <Tags>{tags.join(', ')}</Tags>
@@ -80,12 +80,6 @@ export default class Posts extends React.Component<IOwnState> {
         )
     }
 }
-
-export const PostLinkTitle = styled.span.attrs({
-    className: `sans-serif fw4 dark-gray link hover-gold mb1`,
-})`
-    cursor: pointer;
-`;
 
 export const CreatedWarm = styled.span.attrs({
     className: `ml2 sans-serif f7 mid-gray`,

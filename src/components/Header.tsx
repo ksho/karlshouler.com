@@ -8,7 +8,7 @@ export default class Header extends React.Component {
     public renderNavigation() {
         return (
             <NavigationContainer>
-                <div><Link href='/posts'><NavLink>Writing</NavLink></Link></div>
+                <div><Link legacyBehavior href='/posts'><NavLink>Writing</NavLink></Link></div>
                 <div><NavLink href='https://kshopho.com' target='_blank'>Photography</NavLink></div>
                 <div>Contact</div>
             </NavigationContainer>

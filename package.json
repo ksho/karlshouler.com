@@ -22,7 +22,7 @@
     "@types/styled-components": "^5.1.26",
     "@zeit/next-source-maps": "0.0.3",
     "classnames": "^2.2.6",
-    "next": "^12.3.2",
+    "next": "^13.0.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rehype-raw": "^4.0.2",
