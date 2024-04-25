@@ -2,6 +2,7 @@ const path = require('path')
 const withSourceMaps = require('@zeit/next-source-maps')
 
 module.exports = withSourceMaps({
+    output: 'export',
     pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
 
     webpack(config, { dev, defaultLoaders }) {
