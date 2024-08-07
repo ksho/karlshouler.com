@@ -4,6 +4,7 @@ title: "A Thrill of Hope"
 date: 2014-12-22 19:56:13 -0500
 comments: true
 categories: ["recording", "christmas"]
+draft: true
 ---
 
 On December 6th, the St. Augustine Chamber Choir hosted our annual concert to prepare for Christmas. Today, the entire show is available to stream and [download (mp3, 114 MB)](https://www.dropbox.com/s/45xhimnv0jh14t6/athrillofhope.zip).

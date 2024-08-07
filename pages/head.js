@@ -2,7 +2,7 @@ import Head from 'next/head'
 
 export default ({
     title='Karl Shouler',
-    description='Karl Shouler is a Software Developer in Philadelphia.'
+    description='Karl Shouler is an Engineering Leader based out of Philadelphia.'
 }) =>
     <Head>
         <meta charSet="utf-8" />
