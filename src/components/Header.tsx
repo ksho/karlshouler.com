@@ -19,8 +19,6 @@ export default class Header extends React.Component {
         return (
             <div>
                 <Title href='/'>KARL SHOULER</Title>
-                {/* <Subtitle>Moving bits around, shooting photos, writing songs.</Subtitle> */}
-                {/* <Subtitle>This is where I share my thoughts on technology, photography, and music.</Subtitle> */}
                 { this.renderNavigation() }
             </div>
         );

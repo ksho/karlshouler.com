@@ -1,13 +1,25 @@
 import styled from 'styled-components';
 
 // Tachyons + styled-components -- https://medium.com/@jikkujose/tachyons-styled-components-pure-joy-6173d3888548
-export const Title = styled.a.attrs({
+export const TitlePop = styled.a.attrs({
     className: 'f1',
 })`
     font-family: "Arial Black", -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", 'Inter', "Helvetica Neue", sans-serif;
     color: #f7f7f7;
     text-decoration: none;
-    text-shadow: -3px -3px #3a48af, 3px 3px #3ed8f1;
+    text-shadow: -3px -3px #3a48af, 3px 3px #5fd1e4;
+    font-weight: 900;
+    letter-spacing: 4px;
+    padding-left: 2px;
+`;
+
+export const Title = styled.a.attrs({
+    className: 'f1',
+})`
+    font-family: "Arial", -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", 'Inter', "Helvetica Neue", sans-serif;
+    color: #f7f7f7;
+    text-decoration: none;
+    text-shadow: 1px -1px #3c3c3c, 2px -2px #3090c5, -1px 1px #d5b6c5;
     font-weight: 900;
     letter-spacing: 4px;
     padding-left: 2px;

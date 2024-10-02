@@ -16,6 +16,7 @@ interface Post {
     url: string,
     created: string,
     tags: string[],
+    draft: boolean,
 }
 
 export default class Posts extends React.Component<IOwnState> {
@@ -35,6 +36,7 @@ export default class Posts extends React.Component<IOwnState> {
                 const url = `/posts/${slug}/`;
                 const created = value.default().props.created;
                 const tags = value.default().props.tags;
+                const draft = value.default().props.draft;
 
                 return {
                     title,
@@ -42,6 +44,7 @@ export default class Posts extends React.Component<IOwnState> {
                     url,
                     created,
                     tags,
+                    draft,
                 };
             });
 
@@ -65,7 +68,7 @@ export default class Posts extends React.Component<IOwnState> {
         // });
         return (
             <PageContainer>
-                { postList.map(({ title, slug, url, created, tags }) =>
+                { postList.filter(({draft}) => !draft).map(({ title, slug, url, created, tags }) =>
                     (
                         <div className='mb3' key={slug}>
                             <Link href={url} as={url} style={{cursor: "pointer", textDecoration: "none"}} className={`sans-serif fw4 dark-gray link hover-gold mb1`}>

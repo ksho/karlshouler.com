@@ -21,7 +21,7 @@ export default class MyDocument extends Document {
                     {this.props.styleTags}
                     <link rel="stylesheet" href="/static/tachyons.min.css" />
                 </Head>
-                <body style={bodyStylePop}>
+                <body style={bodyStyleWarm}>
                     <Main />
                     <NextScript />
                 </body>
@@ -31,7 +31,11 @@ export default class MyDocument extends Document {
 }
 
 const bodyStyleWarm = {
-    background: 'fixed linear-gradient(#d8a158, 95%, #2d2d2d)'
+    background: 'fixed linear-gradient(#f7f7f7, 90%, #e7b963)'
+}
+
+const bodyStyleSpring = {
+    background: 'fixed linear-gradient(#f7f7f7, 90%, #109217)'
 }
 
 const bodyStylePop = {

@@ -21,6 +21,7 @@ const WRITING_ITEMS: LinkItem[] = [
 
 const PROJECT_ITEMS: LinkItem[] = [
     { href: 'http://thirtymadison.com', title: 'Thirty Madison' },
+    { href: 'https://github.com/ksho/yearbook', title: 'Yearbook', description: 'Photo gallery app to host annual yearbooks' },
     { href: 'https://beartrap.email', title: 'Bear Trap', description: 'Daily email service for stock futures and insights' },
     { href: 'https://whenisgoldenhour.com', title: 'whenisgoldenhour.com', description: 'Golden hour, where you\'re standing' },
     { href: 'http://kshopho.com', title: 'Karl Shouler Photography' },
@@ -70,16 +71,6 @@ export default class App extends React.Component {
             <PageContainer>
                 {/* <h4 className='fw4 mb1 sans-serif'>Hey! I'm Karl. This is where I share my love of technology, photography, and music.</h4>
                 <Divider>ᐧ ᐧ ᐧ</Divider> */}
-                <Content>
-                    <div className='f4 mb2 sans-serif'>Recents</div>
-                    <UlNonBulleted>
-                        { this.renderWritingItems(WRITING_ITEMS) }
-                    </UlNonBulleted>
-                    <Link href='/posts' as='/posts' className='hover-gold link sans-serif f6 gray i no-underline pointer'>
-                        <span>..the rest of them</span>
-                    </Link>
-                </Content>
-                <Divider>ᐧ ᐧ ᐧ</Divider>
                 <div className='f4 mb2 sans-serif'>Working on..</div>
                 <Content>
                     <UlNonBulleted>
@@ -88,8 +79,19 @@ export default class App extends React.Component {
                     <div><span>* </span><span className='f7'>past work</span></div>
                 </Content>
                 <Divider>ᐧ ᐧ ᐧ</Divider>
+                {/* <Content>
+                    <div className='f4 mb2 sans-serif'>Recents</div>
+                    <UlNonBulleted>
+                        { this.renderWritingItems(WRITING_ITEMS) }
+                    </UlNonBulleted>
+                    <Link href='/posts' as='/posts' className='hover-gold link sans-serif f6 gray i no-underline pointer'>
+                        <span>..the rest of them</span>
+                    </Link>
+                </Content>
+                <Divider>ᐧ ᐧ ᐧ</Divider> */}
                 <Content>Find me on <StyledAnchor href='http://instagram.com/_ksho' target='_blank'>Instagram</StyledAnchor>
                     , <StyledAnchor href='http://github.com/ksho' target='_blank'>Github</StyledAnchor>
+                    , <StyledAnchor href='https://www.linkedin.com/in/karlshoulerjr/' target='_blank'>LinkedIn</StyledAnchor>
                     , and <StyledAnchor href='http://twitter.com/_ksho' target='_blank'>Twitter</StyledAnchor>.
                 </Content>
             </PageContainer>
