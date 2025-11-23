@@ -20,11 +20,12 @@ const WRITING_ITEMS: LinkItem[] = [
 ];
 
 const PROJECT_ITEMS: LinkItem[] = [
-    { href: 'http://thirtymadison.com', title: 'Thirty Madison' },
+    { href: 'http://perpay.com', title: 'Perpay' },
     { href: 'https://github.com/ksho/yearbook', title: 'Yearbook', description: 'Photo gallery app to host annual yearbooks' },
     { href: 'https://beartrap.email', title: 'Bear Trap', description: 'Daily email service for stock futures and insights' },
     { href: 'https://whenisgoldenhour.com', title: 'whenisgoldenhour.com', description: 'Golden hour, where you\'re standing' },
     { href: 'http://kshopho.com', title: 'Karl Shouler Photography' },
+    { href: 'http://thirtymadison.com', title: 'Thirty Madison', description: 'Acquired by RemedyMeds', past: true },
     { href: 'http://curalate.com', title: 'Curalate', description: 'Acquired by Bazaarvoice', past: true },
     { href: 'http://monetate.com', title: 'Monetate', description: 'Acquired by Kibo Commerce', past: true },
 ];
