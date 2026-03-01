@@ -16,12 +16,12 @@ export const TitlePop = styled.a.attrs({
 export const Title = styled.a.attrs({
     className: 'f1',
 })`
-    font-family: "Arial", -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", 'Inter', "Helvetica Neue", sans-serif;
-    color: #f7f7f7;
+    font-family: Georgia, "Times New Roman", serif;
+    color: #2c2c2c;
     text-decoration: none;
-    text-shadow: 1px -1px #3c3c3c, 2px -2px #3090c5, -1px 1px #d5b6c5;
-    font-weight: 900;
-    letter-spacing: 4px;
+    text-shadow: 2px 2px 0px rgba(200, 160, 85, 0.7), -1px -1px 0px rgba(110, 150, 175, 0.5);
+    font-weight: bold;
+    letter-spacing: 5px;
     padding-left: 2px;
 `;
 
