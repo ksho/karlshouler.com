@@ -21,13 +21,17 @@ const WRITING_ITEMS: LinkItem[] = [
 
 const PROJECT_ITEMS: LinkItem[] = [
     { href: 'http://perpay.com', title: 'Perpay' },
+    { href: 'http://mysepta.ksho.co', title: 'SEPTA Live', description: 'Live locations of all your favorite SEPTA routes'  },
     { href: 'https://github.com/ksho/yearbook', title: 'Yearbook', description: 'Photo gallery app to host annual yearbooks' },
-    { href: 'https://beartrap.email', title: 'Bear Trap', description: 'Daily email service for stock futures and insights' },
     { href: 'https://whenisgoldenhour.com', title: 'whenisgoldenhour.com', description: 'Golden hour, where you\'re standing' },
     { href: 'http://kshopho.com', title: 'Karl Shouler Photography' },
-    { href: 'http://thirtymadison.com', title: 'Thirty Madison', description: 'Acquired by RemedyMeds', past: true },
-    { href: 'http://curalate.com', title: 'Curalate', description: 'Acquired by Bazaarvoice', past: true },
-    { href: 'http://monetate.com', title: 'Monetate', description: 'Acquired by Kibo Commerce', past: true },
+];
+
+const PAST_PROJECT_ITEMS: LinkItem[] = [
+    { href: 'https://beartrap.email', title: 'Bear Trap', description: 'Daily email service for stock futures and insights' },
+    { href: 'http://thirtymadison.com', title: 'Thirty Madison', description: 'Acquired by RemedyMeds'},
+    { href: 'http://curalate.com', title: 'Curalate', description: 'Acquired by Bazaarvoice'},
+    { href: 'http://monetate.com', title: 'Monetate', description: 'Acquired by Kibo Commerce'},
 ];
 
 export default class App extends React.Component {
@@ -45,9 +49,9 @@ export default class App extends React.Component {
         )
     }
 
-    public renderProjectItems() {
+    public renderProjectItems(projects: LinkItem[]) {
         return (
-            PROJECT_ITEMS.map((i) => {
+            projects.map((i) => {
                 return (
                     <LiNonBulleted key={i.href}>
                         {i.past &&
@@ -75,9 +79,16 @@ export default class App extends React.Component {
                 <div className='f4 mb2 sans-serif'>Working on..</div>
                 <Content>
                     <UlNonBulleted>
-                        { this.renderProjectItems() }
+                        { this.renderProjectItems(PROJECT_ITEMS) }
                     </UlNonBulleted>
-                    <div><span>* </span><span className='f7'>past work</span></div>
+                    {/* <div><span>* </span><span className='f7'>past work</span></div> */}
+                </Content>
+                <Divider>ᐧ ᐧ ᐧ</Divider>
+                <div className='f4 mb2 sans-serif'>Past work..</div>
+                <Content>
+                    <UlNonBulleted>
+                        { this.renderProjectItems(PAST_PROJECT_ITEMS) }
+                    </UlNonBulleted>
                 </Content>
                 <Divider>ᐧ ᐧ ᐧ</Divider>
                 {/* <Content>
