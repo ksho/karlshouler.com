@@ -29,7 +29,7 @@ export default class MyDocument extends Document {
                 <Head>
                     <link rel="stylesheet" href="/static/tachyons.min.css" />
                 </Head>
-                <body style={bodyStyleWarm}>
+                <body style={bodyStylePop}>
                     <Main />
                     <NextScript />
                 </body>
@@ -48,5 +48,9 @@ const bodyStyleSpring = {
 
 const bodyStylePop = {
     // background: 'fixed linear-gradient(#acbad8, 95%, pink)'
-    background: 'fixed linear-gradient(#f7f7f7, 85%, #517efd)'
+    background: 'fixed linear-gradient(#e4e4e4, 85%, #5162fd)'
+}
+
+const bodyStylePop26 = {
+    background: 'fixed linear-gradient(#f7f7f7, 90%, #f890ec)'
 }
