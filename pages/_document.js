@@ -1,27 +1,35 @@
 import Document, { Head, Html, Main, NextScript } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
-import styled from 'styled-components';
 
 export default class MyDocument extends Document {
-    static async getInitialProps (ctx) {
-        const initialProps = await Document.getInitialProps(ctx)
-
-        // styled-components in nextjs -- https://jsramblings.com/2017/11/27/using-styled-components-with-next-js.html
+    static async getInitialProps(ctx) {
         const sheet = new ServerStyleSheet()
-        const page = ctx.renderPage(App => props => sheet.collectStyles(<App {...props} />))
-        const styleTags = sheet.getStyleElement()
-        
-        return { ...initialProps, ...page, styleTags }
+        const originalRenderPage = ctx.renderPage
+
+        try {
+            ctx.renderPage = () =>
+                originalRenderPage({
+                    enhanceApp: (App) => (props) =>
+                        sheet.collectStyles(<App {...props} />)
+                })
+
+            const initialProps = await Document.getInitialProps(ctx)
+            return {
+                ...initialProps,
+                styles: [initialProps.styles, sheet.getStyleElement()]
+            }
+        } finally {
+            sheet.seal()
+        }
     }
 
-    render () {
+    render() {
         return (
             <Html>
                 <Head>
-                    {this.props.styleTags}
                     <link rel="stylesheet" href="/static/tachyons.min.css" />
                 </Head>
-                <body style={bodyStyleWarm}>
+                <body style={bodyStylePop}>
                     <Main />
                     <NextScript />
                 </body>
@@ -40,5 +48,9 @@ const bodyStyleSpring = {
 
 const bodyStylePop = {
     // background: 'fixed linear-gradient(#acbad8, 95%, pink)'
-    background: 'fixed linear-gradient(#f7f7f7, 85%, #517efd)'
+    background: 'fixed linear-gradient(#e4e4e4, 85%, #5162fd)'
+}
+
+const bodyStylePop26 = {
+    background: 'fixed linear-gradient(#f7f7f7, 90%, #f890ec)'
 }
