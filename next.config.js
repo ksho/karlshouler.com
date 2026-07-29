@@ -1,9 +1,21 @@
 const path = require('path')
-const withSourceMaps = require('@zeit/next-source-maps')
 
-module.exports = withSourceMaps({
+module.exports = {
     output: 'export',
     pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
+    productionBrowserSourceMaps: true,
+
+    // Pin the workspace root; a stray lockfile in a parent directory otherwise
+    // makes Next infer the wrong one.
+    outputFileTracingRoot: __dirname,
+
+    // Replaces babel-plugin-styled-components (SWC handles SSR style injection)
+    compiler: {
+        styledComponents: {
+            ssr: true,
+            displayName: true,
+        },
+    },
 
     webpack(config, { dev, defaultLoaders }) {
         config.module.rules.push({
@@ -33,4 +45,4 @@ module.exports = withSourceMaps({
             ...defaultPathMap
         }
     },
-})
+}
