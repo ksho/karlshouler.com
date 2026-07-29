@@ -2,19 +2,21 @@
   "compilerOptions": {
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
-    "baseUrl": "./",
     "paths": {
       "src/*": [
         "./src/*"
+      ],
+      "pages/*": [
+        "./pages/*"
       ]
     },
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "lib": [
       "dom",
       "es2017"
     ],
     "module": "esnext",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "noEmit": true,
     "noUnusedLocals": false,
     "noUnusedParameters": true,

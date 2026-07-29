@@ -7,7 +7,7 @@ import PageContainer from 'src/components/PageContainer';
 
 interface IOwnState {
     posts: Post[],
-    children: unknown,
+    children: React.ReactNode,
 }
 
 interface Post {

@@ -7,7 +7,7 @@ import { Content } from './SharedComponents';
 interface IOwnState {
     title: string;
     created: string;
-    children: unknown;
+    children: React.ReactNode;
 }
 
 export default class Post extends React.Component<IOwnState> {

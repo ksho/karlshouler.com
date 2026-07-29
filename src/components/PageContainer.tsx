@@ -5,7 +5,7 @@ import Header from 'src/components/Header';
 import Head from 'pages/head';
 
 interface IOwnState {
-    children: unknown;
+    children: React.ReactNode;
 }
 
 export default class PageContainer extends React.Component<IOwnState> {
