@@ -89,15 +89,13 @@ export const CreatedWarm = styled.span.attrs({
 })``;
 
 export const Created = styled.span.attrs({
-    className: `ml2 sans-serif f7 light-silver`,
-})``;
-
-export const TagsWarm = styled.span.attrs({
     className: `ml2 sans-serif f7`,
 })`
-    color: #ffd499
+    color: #5b7cd4;
 `;
 
 export const Tags = styled.span.attrs({
-    className: `ml2 sans-serif f7 moon-gray`,
-})``;
+    className: `ml2 sans-serif f7`,
+})`
+    color: #8a8a8a;
+`;

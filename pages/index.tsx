@@ -23,12 +23,12 @@ const PROJECT_ITEMS: LinkItem[] = [
     { href: 'http://perpay.com', title: 'Perpay' },
     { href: 'http://mysepta.ksho.co', title: 'SEPTA Live', description: 'Live locations of all your favorite SEPTA routes'  },
     { href: 'https://github.com/ksho/yearbook', title: 'Yearbook', description: 'Photo gallery app to host annual yearbooks' },
-    { href: 'https://whenisgoldenhour.com', title: 'whenisgoldenhour.com', description: 'Golden hour, where you\'re standing' },
     { href: 'http://kshopho.com', title: 'Karl Shouler Photography' },
 ];
 
 const PAST_PROJECT_ITEMS: LinkItem[] = [
     { href: 'https://beartrap.email', title: 'Bear Trap', description: 'Daily email service for stock futures and insights' },
+    { href: 'https://whenisgoldenhour.com', title: 'whenisgoldenhour.com', description: 'Golden hour, where you\'re standing' },
     { href: 'http://thirtymadison.com', title: 'Thirty Madison', description: 'Acquired by RemedyMeds'},
     { href: 'http://curalate.com', title: 'Curalate', description: 'Acquired by Bazaarvoice'},
     { href: 'http://monetate.com', title: 'Monetate', description: 'Acquired by Kibo Commerce'},
