@@ -57,7 +57,9 @@ const components = {
     <code className={cx(classes.code, props.className)}>{props.children}</code>,
 
   cite: props =>
-    <div className="tr"><span className="measure dib">{props.children}</span></div>
+    <div className="tr"><span className="measure dib">{props.children}</span></div>,
+
+  strong: props => <strong className="fw6">{props.children}</strong>,
 
 }
 
