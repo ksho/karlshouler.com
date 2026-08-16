@@ -21,6 +21,13 @@ export default (props) => {
 }
 `)
 
+// Frontmatter values arrive as raw strings, so a bare Boolean() would read
+// `draft: false` as true.
+const asBoolean = (value, fallback) => {
+  if (value === undefined || value === '') return fallback
+  return !/^(false|no|0)$/i.test(String(value).trim())
+}
+
 const compileMarkdown = (source) => new Promise((resolve, reject) => {
   reactToHast.process(source, (err, hast) => {
     if (err) reject(err)
@@ -36,7 +43,7 @@ const renderPost = (source, resourcePath) => {
     const { slug } = postHast.data
     const tags = postHast.data.categories ? JSON.parse(postHast.data.categories) : []
     const title = postHast.data.title.replace(/["]+/g, '');
-    const draft = Boolean(postHast.data.draft);
+    const draft = asBoolean(postHast.data.draft, false);
     const dateCreated = (postHast.data.created || postHast.data.date).split(' ')[0];
     const props = Object.assign({}, postHast.data, {
       path: `pages/posts/${slug}.js`,

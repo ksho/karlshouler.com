@@ -1,12 +1,14 @@
 import React from 'react'
 import cx from 'classnames'
 
+import Tweet from 'src/components/Tweet'
+
 const classes = {
   p: `lh-copy mv3`,
   h: `fw4 mb1 sans-serif`,
   list: `pl3-ns pl4`,
   li: `pl1 lh-copy`,
-  blockquote: `f3 mv3 i mh0 pl3 bl lh-title`,
+  blockquote: `f4 mv3 i mh0 pl3 bl lh-title`,
   pre: `f7 ba br1 b--black-90 pre-code overflow-x-scroll`,
   code: `f7 `,
   anchor: 'dark-gray link bb hover-gold',
@@ -14,6 +16,11 @@ const classes = {
 
 // This markdown components pattern originally from
 // https://github.com/wookiehangover/wookiehangover.com/tree/master/src
+
+const classNames = props => {
+  const names = props.class || props.className
+  return Array.isArray(names) ? names : String(names || '').split(/\s+/).filter(Boolean)
+}
 
 const components = {
   a: props =>
@@ -40,10 +47,28 @@ const components = {
   li: props =>
     <li className={cx(classes.li, props.className)}>{props.children}</li>,
 
-  blockquote: props =>
-    <blockquote className={cx(classes.blockquote, props.className)}>
-      {props.children}
-    </blockquote>,
+  // Raw HTML from a post arrives with html attribute names, so the class of a
+  // <blockquote class="twitter-tweet"> is `class`, not `className`.
+  blockquote: props => {
+    const names = classNames(props)
+
+    if (names.includes('twitter-tweet')) {
+      return (
+        <Tweet
+          align={names.includes('tw-align-center') ? 'center' : undefined}
+          className={classes.blockquote}
+        >
+          {props.children}
+        </Tweet>
+      )
+    }
+
+    return (
+      <blockquote className={cx(classes.blockquote, names)}>
+        {props.children}
+      </blockquote>
+    )
+  },
 
   pre: props =>
     <pre className={cx(classes.pre, props.className)}>
