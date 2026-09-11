@@ -20,15 +20,15 @@ const WRITING_ITEMS: LinkItem[] = [
 ];
 
 const PROJECT_ITEMS: LinkItem[] = [
-    { href: 'http://perpay.com', title: 'Perpay' },
     { href: 'http://mysepta.ksho.co', title: 'SEPTA Live', description: 'Live locations of all your favorite SEPTA routes'  },
+    { href: 'https://beartrap.email', title: 'Bear Trap', description: 'Daily email service for stock futures and insights' },
     { href: 'https://github.com/ksho/yearbook', title: 'Yearbook', description: 'Photo gallery app to host annual yearbooks' },
     { href: 'http://kshopho.com', title: 'Karl Shouler Photography' },
 ];
 
 const PAST_PROJECT_ITEMS: LinkItem[] = [
-    { href: 'https://beartrap.email', title: 'Bear Trap', description: 'Daily email service for stock futures and insights' },
     { href: 'https://whenisgoldenhour.com', title: 'whenisgoldenhour.com', description: 'Golden hour, where you\'re standing' },
+    { href: 'http://perpay.com', title: 'Perpay', description: ''  },
     { href: 'http://thirtymadison.com', title: 'Thirty Madison', description: 'Acquired by RemedyMeds'},
     { href: 'http://curalate.com', title: 'Curalate', description: 'Acquired by Bazaarvoice'},
     { href: 'http://monetate.com', title: 'Monetate', description: 'Acquired by Kibo Commerce'},
@@ -74,8 +74,7 @@ export default class App extends React.Component {
     render() {
         return (
             <PageContainer>
-                <Content className='f4 mb2 lh-copy'>Hello! I'm Karl- a technology leader based in Philadelphia. I'm currently the Director of Engineering at Perpay, where we're building financial products that expand access to historically overlooked populations. This is where I share my love of technology, photography, and startups.</Content>
-                {/* <h4 className='fw4 mb1 sans-serif'>Hello! I'm Karl, a technology leader based out of Philadelphia. I'm currently the Director of Engineering at Perpay, where we're building financial products that expand access to those that were historically overlooked. This is where I share my love of technology, photography, and startups.</h4> */}
+                <Content className='f4 mb2 lh-copy'>Hello! I'm Karl- a technology leader and operator based in Philadelphia. This is where I share my thoughts on a range of topics ..  mostly I hover around my love for startups, growing engineering teams, photography, and personal finance.</Content>
                 <Divider>ᐧ ᐧ ᐧ</Divider>
                 <div className='f4 mb2 sans-serif'>Working on..</div>
                 <Content>
