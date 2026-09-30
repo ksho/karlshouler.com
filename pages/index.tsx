@@ -103,8 +103,7 @@ export default class App extends React.Component {
                 <Divider>ᐧ ᐧ ᐧ</Divider> */}
                 <Content>Find me on <StyledAnchor href='http://instagram.com/_ksho' target='_blank'>Instagram</StyledAnchor>
                     , <StyledAnchor href='http://github.com/ksho' target='_blank'>Github</StyledAnchor>
-                    , <StyledAnchor href='https://www.linkedin.com/in/karlshoulerjr/' target='_blank'>LinkedIn</StyledAnchor>
-                    , and <StyledAnchor href='http://twitter.com/_ksho' target='_blank'>Twitter</StyledAnchor>.
+                    , and <StyledAnchor href='https://www.linkedin.com/in/karlshoulerjr/' target='_blank'>LinkedIn</StyledAnchor>.
                 </Content>
             </PageContainer>
         )
