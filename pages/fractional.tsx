@@ -106,9 +106,12 @@ export default class Fractional extends React.Component<{}, IOwnState> {
                     ) }
                 </UlNonBulleted> */}
 
+                <H2>Engineering Org Scale Advisory</H2>
+
                 <H3 id='what-i-do'>What I do</H3>
-                <P>High-growth startups change seasons every year or so; especially today. The way your Engineering team works has to change with it, and it rarely does on its own because everyone’s heads down shipping the work. I help you and your team figure out what the next version looks like, and put you on the path to implementation.
-</P>
+                <P>High-growth startups change seasons every year or so; especially today. The way your Engineering team works has to change with it, and it rarely does on its own because everyone’s heads down shipping the work. I help you and your team figure out what the next version looks like, and put you on the path to implementation.</P>
+
+                <P><StyledAnchor href='https://fantastical.app/karl-shouler/30-min-meet' target='_blank'>Schedule time with me here.</StyledAnchor></P>
 
                 <H3 id='my-pov'>My POV</H3>
                 <P>Your focus is rightfully on your customer and product, and it’s easy to end up in place where you blink and your founding engineer is managing 10 people when they never really thought about how or if they were the best person to do it.</P>
@@ -118,7 +121,7 @@ export default class Fractional extends React.Component<{}, IOwnState> {
 
                 <H3 id='how-to-work-with-me'>How to work with me</H3>
                 <P>I work directly with founders/exec leadership and their engineering team, to figure out what their goals are and map out how to get there. This applies to teams who haven’t thought much at all about what’s possible, as well as those that already have some sense of direction but need to operate through it. One-time org diagnostics and longer term embedded coaching and fractional execution available.</P>
-                <P>Please schedule time with me <StyledAnchor href='https://fantastical.app/karl-shouler/30-min-meet' target='_blank'>here.</StyledAnchor></P>
+                <P><StyledAnchor href='https://fantastical.app/karl-shouler/30-min-meet' target='_blank'>Schedule time with me here.</StyledAnchor></P>
 
                 <H3 id='what-people-say'>What people say</H3>
                 { TESTIMONIALS.map((t) =>
@@ -135,7 +138,7 @@ export default class Fractional extends React.Component<{}, IOwnState> {
                     <Li>Within Engineering orgs at their first 5 heads up to 100+ spanning multiple specialities and business units</Li>
                     <Li>I’ve managed $2mm+ vendor budgets, grown a dozen first time managers, and guided teams through countless consequential situations and incidents</Li>
                 </Ol>
-                <P>I’ve led through numerous of seasons of tech startups .. specifically:</P>
+                <P>I’ve led through numerous seasons of tech startups .. specifically:</P>
                 {/* <Ul> */}
                     { ROLES.map((r) =>
                         <P key={r.title}>
@@ -146,6 +149,8 @@ export default class Fractional extends React.Component<{}, IOwnState> {
                         </P>
                     ) }
                 {/* </Ul> */}
+
+                <P><StyledAnchor href='https://fantastical.app/karl-shouler/30-min-meet' target='_blank'>Schedule time with me here.</StyledAnchor></P>
             </Content>
         );
     }
