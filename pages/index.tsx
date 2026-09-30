@@ -74,7 +74,7 @@ export default class App extends React.Component {
     render() {
         return (
             <PageContainer>
-                <Content className='f4 mb2 lh-copy'>Hello! I'm Karl- a technology leader and operator based in Philadelphia. This is where I share my thoughts on a range of topics, but mostly startups, growing engineering teams, photography, and personal finance.</Content>
+                <Content className='f4 mb2 lh-copy'>Hello! I'm Karl- a technology leader and operator based in Philadelphia. This is where I share my thoughts on a range of topics -- mostly startups, growing engineering teams, photography, and personal finance.</Content>
                 <Divider>ᐧ ᐧ ᐧ</Divider>
                 <div className='f4 mb2 sans-serif'>Working on..</div>
                 <Content>
