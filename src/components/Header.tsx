@@ -9,8 +9,7 @@ export default class Header extends React.Component {
         return (
             <NavigationContainer>
                 <div><Link href='/posts' className='near-black hover-gold link' style={{cursor: 'pointer', fontWeight: 500}}>Writing</Link></div>
-                <div><NavLink href='https://kshopho.com' target='_blank'>Photography</NavLink></div>
-                <div>Contact</div>
+                <div><NavLink href='https://fantastical.app/karl-shouler/30-min-meet' target='_blank'>Contact</NavLink></div>
             </NavigationContainer>
         );
     }
