@@ -2,13 +2,18 @@ import Head from 'next/head'
 
 export default ({
     title='Karl Shouler',
-    description='Karl Shouler is an Engineering Leader based out of Philadelphia.'
+    description='Karl Shouler is an Engineering Leader based out of Philadelphia.',
+    noIndex=false,
 }) =>
     <Head>
         <meta charSet="utf-8" />
         <title>{ title }</title>
         <meta name="author" content="Karl Shouler" />
         <meta name="description" content={ description } />
+        { noIndex &&
+            // Keeps the page out of search results, caches, and snippets.
+            <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex" />
+        }
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta property="og:title" content={ title } />
         <meta property="og:type" content="website" />
