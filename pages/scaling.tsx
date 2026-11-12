@@ -82,6 +82,10 @@ const TESTIMONIALS: Testimonial[] = [
         quote: 'Karl became a real thought leader inside our company on what AI means for how engineering teams should be structured and run – and that thinking reached well beyond his own team. He builds lasting capability, not just short-term output.',
         author: 'Chris DiMarco, CEO, Perpay',
     },
+    {
+        quote: 'Karl is gifted at being able to quickly prioritize business needs while ensuring both the tech and the people scale with his solutions .. he is the 1% of engineering leaders that is able to quickly realize dollars for the business in a short time frame.',
+        author: 'Blake Yoder, Co-Founder, Sentinal; Head of Engineering, Berry Street',
+    },
 ];
 
 interface IOwnState {
