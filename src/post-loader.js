@@ -6,7 +6,7 @@ const reactToHast = require('./react-to-hast')
 
 const postTemplate = (props, tree) => (`
 import { Component } from 'react'
-import Post from '../../src/components/post'
+import Post from '../../src/components/Post'
 import ComponentTree from '../../src/components/component-tree'
 import components from '../../src/components/md-components'
 

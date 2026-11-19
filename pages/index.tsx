@@ -20,7 +20,7 @@ const WRITING_ITEMS: LinkItem[] = [
 ];
 
 const PROJECT_ITEMS: LinkItem[] = [
-    { href: 'http://mysepta.ksho.co', title: 'SEPTA Live', description: 'Live locations of all your favorite SEPTA routes'  },
+    { href: 'https://phillytransitlive.com', title: 'Philly Transit Live', description: 'Live locations of all your favorite SEPTA routes'  },
     { href: 'https://beartrap.email', title: 'Bear Trap', description: 'Daily email service for stock futures and insights' },
     { href: 'https://github.com/ksho/yearbook', title: 'Yearbook', description: 'Photo gallery app to host annual yearbooks' },
     { href: 'http://kshopho.com', title: 'Karl Shouler Photography' },
