@@ -14,4 +14,6 @@ Let’s land the plane. The practicality is real. EMs, Directors, VPs can be the
 
 It’s a great time to be a builder.
 
+(a shot from my desk circa 2012, writing what looks like the now sunset Google Closure)
+
 ![1](/static/images/posts/2026-04-20-be-a-builder/one.jpg)
