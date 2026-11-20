@@ -19,7 +19,7 @@ organization "Florence Ventures LLC").
 
   Both link events carry `link_url`, `link_domain` and `link_text`.
 
-## Planned: managed reverse proxy
+## In progress: managed reverse proxy
 
 **Why:** Events currently go straight to `us.i.posthog.com`, and ad blockers drop
 them. PostHog estimates a proxy recovers 10–30% of events, and likely more for a
@@ -27,35 +27,46 @@ technical audience. The fix is to send events through a subdomain of
 karlshouler.com.
 
 **Approach:** Use PostHog's managed reverse proxy. It is free on PostHog Cloud,
-and the plan allows 10 proxies (none are in use yet). It needs no new
-infrastructure: no CloudFront or S3 changes and nothing to maintain. PostHog
-runs the proxy through Cloudflare and handles TLS itself.
+and the plan allows 10 proxies. It needs no new infrastructure: no CloudFront or
+S3 changes and nothing to maintain. PostHog runs the proxy through Cloudflare and
+handles TLS itself.
 
-### Steps
+### Status
 
-1. **Pick a subdomain.** Pick something neutral, for example `e.karlshouler.com`.
-   Avoid `analytics`, `tracking`, `telemetry`, `posthog` and `ph`, because ad
-   blockers target those words.
-2. **Create the proxy in PostHog.** Go to Organization settings → Proxy
-   (<https://us.posthog.com/settings/organization-proxy>), click **New managed
-   proxy** and enter the subdomain. PostHog generates a target like
-   `<id>.proxy-us.posthog.com`.
-3. **Add the CNAME record at Hover**, which hosts the DNS (`ns1/ns2.hover.com`):
-   - Name: the subdomain part only, for example `e`
-   - Target: the `*.proxy-us.posthog.com` value from step 2
-4. **Wait for the proxy to go live.** Its status in PostHog moves from
+| Step | State |
+| --- | --- |
+| Subdomain chosen: `e.karlshouler.com` | Done |
+| Proxy created in PostHog | Done (2026-11-20), status **waiting** |
+| CNAME added at Hover | **To do** |
+| Proxy live | Waiting on DNS |
+| `ui_host` set in `instrumentation-client.ts` | Done |
+| `NEXT_PUBLIC_POSTHOG_HOST` switched in `.env.production` | **To do**, only after the proxy is live |
+| Build, deploy, verify | To do |
+
+Proxy settings: <https://us.posthog.com/project/755227/settings/organization-proxy>
+
+### Remaining steps
+
+1. **Add the CNAME record at Hover**, which hosts the DNS (`ns1/ns2.hover.com`):
+   - Type: `CNAME`
+   - Hostname: `e`
+   - Target: `f1b79e2875cae6abeacb.cf-prod-us-proxy.proxyhog.com`
+
+   The zone has a wildcard `*` CNAME pointing at the site's CloudFront
+   distribution, which is why `e.karlshouler.com` already resolves today. An
+   explicit `e` record takes precedence over the wildcard, so nothing else needs
+   to change.
+2. **Wait for the proxy to go live.** Its status in PostHog moves from
    **waiting** to **issuing** to **live**. That usually takes 2–5 minutes, and up
    to 30 minutes if DNS is slow. If it stays in **issuing** for longer than that,
    use **Diagnose** or **Retry** on the proxy.
-5. **Update the code:**
-   - In `.env.production`, set
-     `NEXT_PUBLIC_POSTHOG_HOST=https://e.karlshouler.com`, using your subdomain.
-   - In `instrumentation-client.ts`, add `ui_host: 'https://us.posthog.com'` to
-     `posthog.init`. This keeps links back to PostHog, such as the toolbar,
-     pointing at the PostHog app instead of the proxy.
-6. **Build and deploy** with `npm run build && npm run shipit`.
-7. **Verify.** Load the site and check the browser's network tab: requests
-   should go to the new subdomain, not `us.i.posthog.com`. In PostHog, new
+3. **Switch the host.** Only once the proxy is live, set
+   `NEXT_PUBLIC_POSTHOG_HOST=https://e.karlshouler.com` in `.env.production`.
+   Switching earlier would drop every event, because the subdomain would still
+   serve the website.
+4. **Build and deploy** with `npm run build && npm run shipit`.
+5. **Verify.** Load the site and check the browser's network tab: requests
+   should go to `e.karlshouler.com`, not `us.i.posthog.com`. In PostHog, new
    `$pageview` events should carry `$lib_custom_api_host`. Once they do, the
    "No reverse proxy" health check clears.
 

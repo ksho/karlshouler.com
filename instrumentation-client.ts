@@ -12,6 +12,9 @@ const token = process.env.NEXT_PUBLIC_POSTHOG_PROJECT_TOKEN
 if (token) {
     posthog.init(token, {
         api_host: process.env.NEXT_PUBLIC_POSTHOG_HOST,
+        // Once api_host points at the reverse proxy, this keeps links back to
+        // PostHog (such as the toolbar) pointing at the PostHog app.
+        ui_host: 'https://us.posthog.com',
         defaults: '2026-08-30',
         // No logins on this site, so only create person profiles for visitors
         // who are explicitly identified (none are).
